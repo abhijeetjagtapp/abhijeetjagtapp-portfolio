@@ -1,0 +1,40 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#111C34"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad2)"/>
+
+  <text x="56" y="70" font-family="ui-monospace, Menlo, monospace" font-size="14" fill="#00E5C7" letter-spacing="3">LENDING &amp; FINANCIAL ANALYTICS</text>
+
+  <!-- dashboard card frame -->
+  <rect x="56" y="100" width="688" height="230" rx="10" fill="#0B1220" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- gauge / donut -->
+  <g transform="translate(180,215)">
+    <circle r="72" fill="none" stroke="#1E293B" stroke-width="16"/>
+    <circle r="72" fill="none" stroke="#00B8D4" stroke-width="16" stroke-dasharray="330 452" stroke-linecap="round" transform="rotate(-90)"/>
+    <text x="0" y="8" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="28" font-weight="700" fill="#F1F5F9">73%</text>
+    <text x="0" y="28" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#94A3B8">REPAID ON TIME</text>
+  </g>
+
+  <!-- mini bar cluster -->
+  <g transform="translate(340,150)">
+    <rect x="0" y="110" width="26" height="50" rx="3" fill="#00E5C7"/>
+    <rect x="36" y="80" width="26" height="80" rx="3" fill="#00B8D4"/>
+    <rect x="72" y="40" width="26" height="120" rx="3" fill="#00E5C7"/>
+    <rect x="108" y="95" width="26" height="65" rx="3" fill="#00B8D4" opacity="0.8"/>
+    <text x="0" y="185" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#94A3B8">Loan volume, YoY</text>
+  </g>
+
+  <!-- line trend -->
+  <g transform="translate(540,150)">
+    <polyline points="0,90 30,60 60,75 90,30 120,45" fill="none" stroke="#F1F5F9" stroke-width="2.5"/>
+    <circle cx="120" cy="45" r="5" fill="#00E5C7"/>
+    <text x="0" y="185" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#94A3B8">Credit score vs. repayment</text>
+  </g>
+
+  <text x="56" y="410" font-family="ui-sans-serif, Inter, sans-serif" font-size="24" font-weight="600" fill="#F1F5F9">Power BI Loan Analytics Dashboard</text>
+</svg>

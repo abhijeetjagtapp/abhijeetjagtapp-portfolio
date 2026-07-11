@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#111C34"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad3)"/>
+
+  <text x="56" y="70" font-family="ui-monospace, Menlo, monospace" font-size="14" fill="#00E5C7" letter-spacing="3">ROBOTICS · ROS2 · GAZEBO</text>
+
+  <!-- occupancy grid -->
+  <g opacity="0.5">
+    <g stroke="#1E293B" stroke-width="1">
+      <line x1="120" y1="120" x2="680" y2="120"/>
+      <line x1="120" y1="170" x2="680" y2="170"/>
+      <line x1="120" y1="220" x2="680" y2="220"/>
+      <line x1="120" y1="270" x2="680" y2="270"/>
+      <line x1="120" y1="320" x2="680" y2="320"/>
+      <line x1="170" y1="100" x2="170" y2="340"/>
+      <line x1="260" y1="100" x2="260" y2="340"/>
+      <line x1="350" y1="100" x2="350" y2="340"/>
+      <line x1="440" y1="100" x2="440" y2="340"/>
+      <line x1="530" y1="100" x2="530" y2="340"/>
+      <line x1="620" y1="100" x2="620" y2="340"/>
+    </g>
+  </g>
+
+  <!-- obstacles -->
+  <rect x="260" y="170" width="90" height="50" rx="4" fill="#EF4444" opacity="0.35"/>
+  <rect x="440" y="220" width="90" height="50" rx="4" fill="#EF4444" opacity="0.35"/>
+
+  <!-- A* path around obstacles -->
+  <polyline points="140,145 170,145 170,195 220,195 260,145 350,145 350,245 440,295 530,295 530,195 620,195"
+            fill="none" stroke="#00E5C7" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#00B8D4">
+    <circle cx="140" cy="145" r="6"/>
+    <circle cx="260" cy="145" r="5"/>
+    <circle cx="350" cy="245" r="5"/>
+    <circle cx="530" cy="295" r="5"/>
+  </g>
+  <circle cx="620" cy="195" r="8" fill="#00E5C7"/>
+  <text x="600" y="175" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#94A3B8">goal</text>
+  <circle cx="140" cy="145" r="8" fill="none" stroke="#F1F5F9" stroke-width="2"/>
+
+  <text x="56" y="410" font-family="ui-sans-serif, Inter, sans-serif" font-size="26" font-weight="600" fill="#F1F5F9">Autonomous Navigation &amp; Path Planning</text>
+</svg>

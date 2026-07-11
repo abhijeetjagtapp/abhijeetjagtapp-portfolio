@@ -6,7 +6,6 @@ import Link from "next/link";
 import { ReactNode } from "react";
 
 const BASE_PATH = "/assets/projects-screenshots";
-const PLACEHOLDER_IMG = "/assets/logo-dark.svg";
 
 const MaskIcon = ({ src, title }: { src: string; title?: string }) => (
   <span
@@ -62,20 +61,7 @@ const brand = (title: string, file: string): Skill => ({
 });
 
 const PROJECT_SKILLS = {
-  next: brand("Next.js", "nextdotjs-mono.svg"),
-  react: brand("React.js", "react-mono.svg"),
-  ts: brand("TypeScript", "typescript-mono.svg"),
-  tailwind: brand("Tailwind", "tailwind-css-mono.svg"),
-  node: brand("Node.js", "nodedotjs-mono.svg"),
   python: brand("Python", "python-mono.svg"),
-  postgres: brand("PostgreSQL", "postgresql-mono.svg"),
-  mongo: brand("MongoDB", "mongodb-mono.svg"),
-  aiSDK: brand("Vercel AI SDK", "vercel-mono.svg"),
-  anthropic: brand("Anthropic Claude", "anthropic-mono.svg"),
-  mistral: brand("Mistral AI", "mistral-ai-mono.svg"),
-  sockerio: brand("Socket.io", "socketdotio-mono.svg"),
-  docker: brand("Docker", "docker-mono.svg"),
-  aws: brand("AWS", "cloudflare-mono.svg"),
 };
 
 export type Project = {
@@ -92,180 +78,121 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    id: "callhq",
-    category: "Voice AI",
-    title: "CallHQ.ai",
-    src: `${BASE_PATH}/callhq/callhq.png`,
-    screenshots: ["callhq.png"],
-    live: "https://callhq.ai",
+    id: "churn-analytics",
+    category: "Data Analytics",
+    title: "Customer Churn Prediction & Retention Analytics",
+    src: `${BASE_PATH}/churn-analytics/churn-analytics.svg`,
+    screenshots: ["thumbnail.svg"],
+    live: "#",
     skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.tailwind,
-      ],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.python,
-        PROJECT_SKILLS.aiSDK,
-        PROJECT_SKILLS.anthropic,
-      ],
+      frontend: [],
+      backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono">
-            AI-powered voice agents for sales, customer engagement, and lead
-            generation — natural, human-like phone conversations at scale.
+            End-to-end analytics pipeline investigating customer attrition
+            across subscription, demographic, revenue, and support data.
+            Engineered churn flags, tenure, and revenue-at-risk features,
+            then visualized results in a Power BI executive dashboard —
+            uncovering 28% overall churn and high-value segments needing
+            retention action.
           </TypographyP>
           <ProjectsLinks live={this.live} />
-          <SlideShow images={[`${BASE_PATH}/callhq/callhq.png`]} />
+          <SlideShow images={[`${BASE_PATH}/churn-analytics/churn-analytics.svg`]} />
         </div>
       );
     },
   },
   {
-    id: "broki",
-    category: "Marketplace",
-    title: "Broki",
-    src: `${BASE_PATH}/broki/broki.png`,
-    screenshots: ["broki.png"],
-    live: "https://broki.in",
+    id: "loan-analytics-dashboard",
+    category: "Data Analytics",
+    title: "End-to-End Power BI Loan Analytics Dashboard",
+    src: `${BASE_PATH}/loan-analytics-dashboard/thumbnail.svg`,
+    screenshots: ["thumbnail.svg"],
+    live: "#",
     skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.tailwind,
-      ],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.postgres,
-        PROJECT_SKILLS.mongo,
-      ],
+      frontend: [],
+      backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono">
-            One-stop marketplace for food &amp; beverage — cloud kitchens,
-            restaurants, and commercial spaces across Delhi NCR.
+            Lending &amp; financial analytics dashboard built on a Power BI
+            Dataflow (Azure) with scheduled and incremental refresh. Ingested
+            raw loan data from SQL Server into an Azure Dataflow pipeline,
+            profiling and restructuring it in Power Query so the downstream
+            model was clean enough to trust before any analysis began.
+          </TypographyP>
+          <TypographyP className="font-mono">
+            Built DAX measures answering specific business questions —
+            default rates by employment type, year-over-year loan volume
+            shifts, and how credit score interacts with repayment behaviour
+            across age groups. Designed an interactive multi-page report
+            with dynamic segmentation so a credit manager could slice by
+            borrower profile without waiting on the analyst team for every
+            new cut of data. Configured incremental and scheduled Dataflow
+            refresh so the dashboard stayed current automatically — turning
+            a one-time analysis into a persistent decision-making tool.
           </TypographyP>
           <ProjectsLinks live={this.live} />
-          <SlideShow images={[`${BASE_PATH}/broki/broki.png`]} />
+          <SlideShow images={[`${BASE_PATH}/loan-analytics-dashboard/thumbnail.svg`]} />
         </div>
       );
     },
   },
   {
-    id: "whatsapp",
-    category: "Messaging",
-    title: "CallHQ WhatsApp",
-    src: `${BASE_PATH}/whatsapp/whatsapp.png`,
-    screenshots: ["whatsapp.png"],
-    live: "https://whatsapp.callhq.ai",
+    id: "autonomous-navigation",
+    category: "Robotics",
+    title: "Autonomous Navigation & Path Planning",
+    src: `${BASE_PATH}/autonomous-navigation/thumbnail.svg`,
+    screenshots: ["thumbnail.svg"],
+    live: "#",
     skills: {
-      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.tailwind],
-      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.sockerio],
+      frontend: [],
+      backend: [PROJECT_SKILLS.python],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono">
-            WhatsApp integration layer for CallHQ — automate customer
-            conversations and workflows over WhatsApp Business.
+            Developed A* path planning algorithms in Python with obstacle
+            avoidance using ROS2 and Gazebo, demonstrating expert-level
+            algorithmic design and problem-solving. Evaluated algorithm
+            performance and decision correctness in simulated environments,
+            applying rigorous test case design and logic validation.
           </TypographyP>
           <ProjectsLinks live={this.live} />
-          <SlideShow images={[`${BASE_PATH}/whatsapp/whatsapp.png`]} />
+          <SlideShow images={[`${BASE_PATH}/autonomous-navigation/thumbnail.svg`]} />
         </div>
       );
     },
   },
   {
-    id: "orrdr",
-    category: "Commerce",
-    title: "Orrdr",
-    src: `${BASE_PATH}/orrdr/orrdr.png`,
-    screenshots: ["orrdr.png"],
-    live: "https://orrdr.com",
+    id: "computer-vision-robotics",
+    category: "Robotics",
+    title: "Computer Vision for Intelligent Mobile Robotics",
+    src: `${BASE_PATH}/computer-vision-robotics/thumbnail.svg`,
+    screenshots: ["thumbnail.svg"],
+    live: "#",
     skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.tailwind,
-      ],
-      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.postgres],
+      frontend: [],
+      backend: [PROJECT_SKILLS.python],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono">
-            Commerce platform for ordering and fulfillment.
+            Implemented object detection and tracking logic achieving
+            90%+ ball detection accuracy, validating model inference with
+            detailed false-positive/negative analysis. Documented
+            performance tradeoffs and system architecture decisions,
+            reinforcing clear technical communication practices.
           </TypographyP>
           <ProjectsLinks live={this.live} />
-          <SlideShow images={[`${BASE_PATH}/orrdr/orrdr.png`]} />
-        </div>
-      );
-    },
-  },
-  {
-    id: "otoma8",
-    category: "AI Platform",
-    title: "Otoma8",
-    src: `${BASE_PATH}/otoma8/otoma8.png`,
-    screenshots: ["otoma8.png"],
-    live: "https://otoma8.com",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.tailwind,
-      ],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.python,
-        PROJECT_SKILLS.aiSDK,
-      ],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono">
-            AI platform co-founded alongside CallHQ and Broki — building the next
-            generation of business automation tools.
-          </TypographyP>
-          <ProjectsLinks live={this.live} />
-          <SlideShow images={[`${BASE_PATH}/otoma8/otoma8.png`]} />
-        </div>
-      );
-    },
-  },
-  {
-    id: "tesorobysania",
-    category: "E-commerce",
-    title: "Tesoro by Sania",
-    src: PLACEHOLDER_IMG,
-    screenshots: [],
-    live: "https://tesorobysania.com",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.tailwind,
-      ],
-      backend: [PROJECT_SKILLS.node],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono">
-            Premium e-commerce storefront for Tesoro by Sania.
-          </TypographyP>
-          <ProjectsLinks live={this.live} />
+          <SlideShow images={[`${BASE_PATH}/computer-vision-robotics/thumbnail.svg`]} />
         </div>
       );
     },
