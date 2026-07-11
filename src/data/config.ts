@@ -1,9 +1,8 @@
 const config = {
-  title: "Abhijeet Jagtap | Data Anlayst",
+  title: "Abhijeet Jagtap | Data Analyst",
   description: {
     long: "Explore the portfolio of Abhijeet Jagtap — a data analyst specializing in transforming raw data into actionable insights using Python, SQL, Power BI, and modern cloud platforms like AWS and Azure.",
-    short:
-      "Portfolio of Abhijeet Jagtap — Data Analyst & Full-Stack Developer. ",
+    short: "Portfolio of Abhijeet Jagtap — Data Analyst & Full-Stack Developer.",
   },
   keywords: [
     "Abhijeet Jagtap",
@@ -29,10 +28,10 @@ const config = {
   ],
   author: "Abhijeet Jagtap",
   email: "abhijeetjagtap.aj5@gmail.com",
-  site: "https://abhijeetjagtap.ca",
+  site: "https://abhijeetjagtap.com",
 
   // for github stars button
-  githubUsername: "",
+  githubUsername: "abhijeetjagtapp",
   githubRepo: "",
 
   get ogImg() {
@@ -40,9 +39,9 @@ const config = {
   },
   social: {
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/abhijeetjagtapp/",
-    instagram: "https://www.linkedin.com/in/abhijeetjagtapp",
-    facebook: "https://www.linkedin.com/in/abhijeetjagtapp",
+    linkedin: "https://linkedin.com/in/abhijeetjagtapp/",
+    instagram: "",
+    facebook: "",
     github: "https://github.com/abhijeetjagtapp",
   },
 };
