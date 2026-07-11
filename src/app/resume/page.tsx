@@ -1,9 +1,9 @@
 import ResumeView from "./resume-view";
 
 export const metadata = {
-  title: "Résumé | Akash Malhotra",
+  title: "Résumé | Abhijeet Jagtap",
   description:
-    "Résumé of Akash Malhotra — Co-Founder & Engineer. View online or download the PDF.",
+    "Résumé of Abhijeet Jagtap — Data Analyst & Full Stack Developer. ",
 };
 
 export default function ResumePage() {
